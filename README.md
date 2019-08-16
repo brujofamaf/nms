@@ -32,9 +32,6 @@ optional arguments:
                         Nms threhold
   -s, --not_suppress    If present it won't be delete suppressed ones. Just
                         set score to zero
-
-Use nms_main.py {command} -h to get helps
-
 ```
 
 # Execute
