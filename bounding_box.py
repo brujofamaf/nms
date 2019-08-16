@@ -26,6 +26,14 @@ class BoundingBox(object):
         self._height = height
 
     @property
+    def top_right_coord(self):
+        """
+        gets top right coord
+        :return: top right coord
+        """
+        return self._top_right_coord
+
+    @property
     def w(self) -> int:
         """
         returns bounding box width
