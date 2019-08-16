@@ -45,3 +45,13 @@ class ScoreNotValid(NmsException):
     def __init__(self):
         super(ScoreNotValid, self).__init__(
             "Detection score must be between 0.0 and 1.0")
+
+
+class NmsThresholdInvalidException(NmsException):
+    """
+    Exception thrown when nms threshold value is not valid
+    """
+
+    def __init__(self):
+        super(NmsThresholdInvalidException, self).__init__(
+            "Nms threshold must be between 0.0 and 1.0")
