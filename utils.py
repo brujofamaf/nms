@@ -1,7 +1,8 @@
+from typing import List
 from detection import Detection
 
 
-def get_max_score_detection(detections: list(Detection)) -> Detection:
+def get_max_score_detection(detections: List[Detection]) -> Detection:
     """
     get maximum scored detection of detections list
     :param detections: detections list
