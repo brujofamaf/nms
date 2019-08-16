@@ -8,9 +8,7 @@ from algorithms import nms
 
 if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(
-        description="Non Maximum Suppression algorithm",
-        epilog="Use %(prog)s {command} -h to get "
-               "helps")
+        description="Non Maximum Suppression algorithm")
     arg_parser.add_argument("-i", "--detections-file",
                             help="Detections csv file path",
                             type=str,
@@ -26,7 +24,7 @@ if __name__ == "__main__":
                             default=0.5,
                             required=False)
     arg_parser.add_argument("-s", "--not_suppress",
-                            help="If present it won't be delete"
+                            help="If present it won't be delete "
                                  "suppressed ones. Just set score to zero",
                             action='store_true')
     parsed_args = arg_parser.parse_args()

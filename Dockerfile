@@ -4,4 +4,4 @@ LABEL maintainer="brujofamaf@gmail.com"
 WORKDIR /usr/src/app
 COPY . .
 
-CMD [ "python", "./nms_main.py" ]
+ENTRYPOINT [ "python", "./nms_main.py" ]
