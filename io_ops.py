@@ -11,6 +11,7 @@ BB_H = "bb_h"
 SCORE = "score"
 FIELDNAMES = [X_TOP_RIGHT_KEY, Y_TOP_RIGHT_KEY, BB_W, BB_H, SCORE]
 
+
 def detections_from_csv(csv_filepath: str) -> List[Detection]:
     """
     reads a detection list from csv file
@@ -26,6 +27,7 @@ def detections_from_csv(csv_filepath: str) -> List[Detection]:
             bb = BoundingBox(top_right_coord, int(row[BB_W]), int(row[BB_H]))
             detection = Detection(bb, float(row[SCORE]))
             detections.append(detection)
+    return detections
 
 
 def detections_to_csv(csv_output_path: str, detections: List[Detection]):

@@ -1,3 +1,4 @@
+import os
 import sys
 import argparse
 from exceptions import NmsException
@@ -27,11 +28,11 @@ if __name__ == "__main__":
     arg_parser.add_argument("-s", "--not_suppress",
                             help="If present it won't be delete"
                                  "suppressed ones. Just set score to zero",
-                            type=bool,
                             action='store_true')
     parsed_args = arg_parser.parse_args()
     try:
-        detections = detections_from_csv(parsed_args.detections_file)
+        input_file = os.path.abspath(parsed_args.detections_file)
+        detections = detections_from_csv(input_file)
         filtered_detections = nms(detections, parsed_args.nms_threshold,
                                   parsed_args.not_suppress)
         detections_to_csv(parsed_args.output_file, filtered_detections)

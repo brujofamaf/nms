@@ -9,6 +9,7 @@ def nms(detections: List[Detection], nms_threshold: float,
     detections_result = list()
     while remaining_detections:
         max_scored_detection = get_max_score_detection(remaining_detections)
+        assert max_scored_detection is not None
         detections_result.append(max_scored_detection)
         remaining_detections.remove(max_scored_detection)
         for detection in remaining_detections:

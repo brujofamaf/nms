@@ -14,5 +14,5 @@ def get_max_score_detection(detections: List[Detection]) -> Detection:
     for detection in detections:
         if detection.score > max_score:
             max_score = detection.score
-            max_detection = max_detection
+            max_detection = detection
     return max_detection
