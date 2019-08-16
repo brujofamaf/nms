@@ -1,4 +1,4 @@
-from exceptions import NegativeCoordinateException
+from exceptions import NegativeValueException
 
 
 class Coordinate(object):
@@ -12,8 +12,10 @@ class Coordinate(object):
         :param x: horizontal coordinate
         :param y: vertical coordinate
         """
-        if x < 0 or y < 0:
-            raise NegativeCoordinateException()
+        if x < 0:
+            raise NegativeValueException("x coordinate")
+        if y < 0:
+            raise NegativeValueException("y coordinate")
         self._x = x
         self._y = y
 
